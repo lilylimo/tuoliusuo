@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="format-detection" content="telephone=no" searchtype="map">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="msapplication-tap-highlight" content="no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>拓留锁-抢红包</title>
+<meta name="description" content="">
+<meta name="keyword" content="">
+<link rel="stylesheet" href="css/base.css" />
+<link rel="stylesheet" href="css/coupon.css" />
+<script type="text/javascript" src="js/jquery-1.11.0.min.js" ></script>
+<script type="text/javascript" src="js/mui.min.js" ></script>
+</head>
+<body>
+<!-- 抢红包主体  开始-->
+<section class="mui-content mui-scroll-wrapper scrollY">
+	<div class="mui-scroll">
+		<div class="grabBox">
+			<!-- 抢红包  头部-->
+			<div class="grabTop">
+				<img src="images/grabTopBg.jpg"/>
+				<h3>今日还剩<i>8</i>张</h3>
+			</div>
+			
+			 <!-- 抢红包   主体内容-->
+			 <div class="grabMain">
+			 	<!-- 活动倒计时  -->
+			 	<div class="grabTimeBox">
+			 		<span>距活动结束</span>
+			 		<cite class="settime" data-time="2016-11-15 12:00:00"></cite>
+			 	</div>
+			 	<!-- 我要抢 按钮  -->
+			 	<button class="grabBtn" id="grabNow"></button>	
+			 	<!-- 抢到了  -->
+			 	<div class="grabListBox">
+			 		<img src="images/grabYep.png" />
+			 		<div class="rankingInfo">
+		                <ul>
+				 			<li>
+				 				<span>15974448888</span>
+				 				<span>已抢到一张优惠劵</span>
+				 			</li>
+				 			<li>
+				 				<span>15974448888</span>
+				 				<span>已抢到一张优惠劵</span>
+				 			</li>
+				 			<li>
+				 				<span>15974448888</span>
+				 				<span>已抢到一张优惠劵</span>
+				 			</li>
+				 			<li>
+				 				<span>15974448888</span>
+				 				<span>已抢到一张优惠劵</span>
+				 			</li>
+				 			<li>
+				 				<span>15974448888</span>
+				 				<span>已抢到一张优惠劵</span>
+				 			</li>
+				 		</ul>
+		            </div>
+		            
+			 	</div>
+			 	<!-- 活动规则  -->
+			 	<div class="ruleBox">
+			 		<img src="images/activityRule.png" />
+			 		<div class="ruleList">
+			 			<p>
+			 				1．该活动每位用户只可领取一个红包。
+			 			</p>
+			 			<p>
+			 				2．红包最多只可抵扣到店消费金额的****50%，且不可叠加使用。
+			 			</p>
+			 			<p>
+			 				3．红包只可抵用到店消费使用，具体适用项目请到店咨询。
+			 			</p>
+			 			<p>
+			 				4．红包使用有效期为*****天，过期将无法抵扣到店消费。
+			 			</p>
+			 			<h4 class="displayBox">
+				 			<label>注：</label>
+				 			<span class="boxflex">活动最终解释权归“****美容院”所有，如有疑问请拨打门店电话*******</span>
+				 		</h4>
+			 		</div>
+			 	</div>
+			 	
+			 </div>
+		</div>
+		 
+	</div>
+</div>
+<!-- 抢红包主体  结束-->
+
+<!-- 抢到了弹层  开始-->
+<div class="grabPopBox hide" id="grabYesPop">
+	<img src="images/grabYesBg.png" class="grabYesImg" />
+	<h4>恭喜您抢到了 </h4>
+	<h3>50元优惠劵</h3>
+	<img src="images/grabCode.png" />
+	<p>关注公众号查看优惠劵</p>
+</div>
+<!-- 抢到了弹层  结束-->
+<div class="grabPopBg"></div>
+<!-- 没抢到弹层  开始-->
+<div class="grabPopBox hide" id="grabNoPop">
+	<img src="images/ng.png" class="ngImg"/>
+	<h4 class="ngTip">很遗憾！你抢到了空气...</h4>
+	<img src="images/grabCode.png" />
+	<p>关注公众号获得更多福利</p>
+</div>
+<!-- 没抢到弹层  结束-->
+
+<!-- 顶部    用户入口   开始-->
+<div class="userEnter">
+	<dl class="displayBox">
+		<dt>
+			<img src="images/teamslide1.png" />
+		</dt>
+		<dd class="boxflex">
+			用户姓名
+		</dd>
+	</dl>
+	<div class="userBtn">
+		<a href="myCoupon.html" class="couponBtn">
+			优惠券
+		</a>
+		<a href="userOrderList.html" class="orderBtn">
+			我的订单
+		</a>
+	</div>
+</div>
+<!-- 顶部    用户入口   结束-->
+
+<script type="text/javascript" src="js/public.js" ></script>
+<script type="text/javascript" src="js/grabCoupon.js" ></script>
+
+</body>
+</html>

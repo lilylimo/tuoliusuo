@@ -1,0 +1,96 @@
+/*******  我的团队    ********/
+
+/* 顶部  团队筛选导航  */
+.teamNavBox{position: fixed;top: 0;left: 0;z-index: 4;width: 100%;height: 280px;}
+.teamNavBox .teamType{padding: 15px 10px 10px 10px;}
+.teamNavBox .teamType button{background: #f6eded;border-radius: 3px;width: 28%;height: 30px;display: inline-block;margin: 0 2%;}
+.teamNavBox .teamType button.cur{background: #fff;border:1px solid #ff3939;color: #ff3939;}
+.teamNavBox h3{color: #827e7e;font-size: 15px;padding: 0 10px 0 15px;position: relative;}
+.teamNavBox h3:after{content: "";width: 68%;border-top: 1px solid #eeeeee;display: inline-block;position: absolute;right: 18px; top: 10px;}
+
+.teamListScroll{top: 50px;height: 186px;}
+.teamListScroll ul{padding: 0 15px;margin-top: 5px;}
+.teamListScroll ul li{line-height: 26px;height: 26px;}
+.teamListScroll ul li.cur{color: #ff3939;border-bottom: 1px solid #ff3939;}
+.teamListScroll ul li.cur:after{content: "✔";float: right;}
+
+.teamListBtn{position: absolute;bottom: 0;left: 0;width: 100%;height: 40px;line-height: 40px;text-align: center; z-index: 9;}
+.teamListBtn button{width: 50%;float: left;line-height: 40px;}
+.teamListBtn button:nth-of-type(2){background: #ff3939;color: #fff;}
+
+/* 当前团队名称  */
+.curTeamName{position: fixed;top: 45px;left: 0;color: #ff6f60;text-align: center;width: 100%;height: 30px;line-height: 30px;}
+
+/* 团队列表  */
+.teamBox h3{height: 48px;line-height: 48px;text-align: center;}
+.teamBox h3 i{padding:0 6px 0 8px; height: 18px;line-height:18px;background: #333;color: #fff;margin:0 5px 0 1px;border-radius: 2px;position:relative;font-weight: bold;}
+.teamBox h3 i:before{content: "";width: 6px;height: 12px;background: #fff;border-radius: 2px;position:absolute;left: -2px;top: 3px;}
+.teamBox h3 b{font-weight: bold;}
+.teamBox h3 span{margin-left: 5px;}
+
+/* 团队列表   滑动  */
+.teamSlide{width: 100%;height: 130px;}
+.teamSlideBox{text-align: center;margin-right:15px;position: relative;}
+.teamSlideBox:before{content: "";width: 20px;height: 20px;background: url(../images/telephone.svg) no-repeat;background-size: contain; position: absolute;right: 3px;top: 57px;}
+.noTel:before{background:none;}
+.teamSlideBox .teamSlideImg{width: 80px;height:80px;border-radius: 4px;overflow: hidden;background: url(../images/waitU.png) no-repeat;background-size: contain;}
+.teamSlideBox .teamSlideImg img{width: 100%;height: 100%;}
+.teamSlideBox h3{height: 24px;line-height: 28px;overflow: hidden;width: 80px;}
+.teamSlideBox p{color:#bebcbc;font-size: 12px;}
+
+/* 团队列表   按钮  */
+.teamBar{height: 38px;line-height: 38px;}
+.teamBar a,.teamBar button{display: inline-block;width: 50%;text-align: center;float: left;font-size: 15px;}
+
+/* 底部  代开团  */
+.waitStart{position: fixed;bottom: 0;left: 0;z-index: 2;background: #eeeeee;width: 100%;height: 50px;padding: 8px;}
+.waitStart button{background: #ff3939;color: #fff;width: 60%;height: 34px;border-radius: 3px;margin: 0 auto;font-size: 15px;}
+
+/*******  我的队员  队员列表    ********/
+.memberBox button{height: 30px;line-height: 25px;padding-left: 5px;color: #7b7b7b;font-size: 16px;font-weight: bold;}
+.memberBox dl dt{width: 35px;height: 35px;border-radius: 50%;overflow: hidden;margin-right: 10px;}
+.memberBox dl dt img{width: 100%;}
+.memberBox dl dd p{color: #ccc;font-size: 13px;}
+
+.storeTeachTeam{height: 150px;}
+
+
+/*三星galaxy*/
+@media screen and (min-width:360px){
+	.waitStart{height: 60px;}
+	.waitStart button{height: 44px;}
+}
+/*iPhone 6*/
+@media screen and (min-width:375px){
+	
+}
+/*iPhone 6 Plus*/
+@media screen and (min-width:414px){
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

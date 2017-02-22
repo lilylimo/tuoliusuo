@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+/****************
+ * @description : 拓留锁
+ * @author   : chenlili
+ * @date     : 2016-11-1
+ ****************/
+ 
+/*	登录		*/
+body{margin: 0;}
+ul{padding: 0;margin: 0;}
+.loginBox{padding: 25% 10%;}
+
+.regInfo{width:100%; box-sizing:border-box; padding:5px 0; border-radius:4px; background:#fff; overflow:hidden; }
+.regInfo li{ width:100%; padding:8px 0; display:-moz-box; display:-webkit-box; display:-o-box; display:box; display:-mz-box; position:relative;border-bottom: 1px solid #eee; }
+.regInfo li:nth-of-type(2):after{content: "|";color:#cccccc;position: absolute;line-height: 36px;right: 110px;top: 9px;}
+.regInfo li label{ width:40px;position:relative; font-size:16px; line-height:39px; display:block; color:#b3b4c4;font-weight: bold;margin-right: 5px;}
+.regInfo li label:after{content: "|";margin-left: 5px;font-size: 16px;}
+.regInfo li label.phone:before{ content:"+";margin-right: 2px;color: #b3b4c4;}
+.regInfo li label.pwd:before{ content:"\e983";}
+
+.regInfo p{color: #333;font-size: 14px;line-height: 22px;}
+
+.regInfo li input{font-size: 14px; height:24px; line-height:24px; background:none; box-flex:1; -o-box-flex:1; -webkit-box-flex:1; -moz-box-flex: 1; -mz-box-flex:1; display:block; border-radius:0; border:0; color:#c7c7cd;margin: 6px 0;}
+.regInfo li input.focus{ color: #333;}
+.regInfo li input.send{ font-size:13px; display:inline-block; color:#ff6f60;font-weight: bold;width: 116px;}
+.submitBtn { width:100%; margin-top:22px;}
+.submitBtn a.sendbtn{ width:100%; display:block; background:#ff6f60; color:#fff; font-size:16px; height:40px; line-height:40px; border-radius:3px; text-align:center; margin:0 auto;text-decoration: none;}
+.submitBtn a.yellow{ background:#e39101;}
+
+@media screen and (min-width:360px){
+	.regInfo li:nth-of-type(2):after{right: 110px;}
+}
+@media screen and (min-width:375px){
+	.regInfo{ padding:10px 0;}
+	.regInfo li{ padding:8px 0; font-size:16px;}
+	.redLogo:before{ width:100px; height:100px; background-size:80px auto;}
+	.submitBtn{ margin-top:35px;}
+	.submitBtn a.sendbtn{ height:46px; line-height:46px; font-size:18px;}
+}
+@media screen and (min-width:414px){
+	.regInfo li:nth-of-type(2):after{right: 120px;}
+}

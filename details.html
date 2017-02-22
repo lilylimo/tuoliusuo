@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="format-detection" content="telephone=no" searchtype="map">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="msapplication-tap-highlight" content="no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!--	不缓存页面		-->
+<meta http-equiv="pragma" content="no-cache" /> 
+<meta http-equiv"Cache-Control" content="no-cache, must-revalidate" />
+<meta http-equiv"expires" content="0" />
+<title>拓留锁-团购详情</title>
+<meta name="description" content="">
+<meta name="keyword" content="">
+<link rel="stylesheet" href="css/base.css" />
+<link rel="stylesheet" href="css/details.css" />
+<script type="text/javascript" src="js/jquery-1.11.0.min.js" ></script>
+<script type="text/javascript" src="js/mui.min.js" ></script>
+</head>
+<body>
+<!-- 团购详情主体  开始-->
+<section class="mui-content mui-scroll-wrapper scrollY scrollBt50" id="detailScroll">
+	<div class="mui-scroll detailScroll">
+		 <div class="detailBox">
+		 	<div class="detailTop">
+		 		<h2>活动城市：<i>宁波</i></h2>
+		 		<h3>适应门店：<i>美尚惠科技美容馆</i></h3>
+		 	</div>
+		 	<!-- 活动规则  开始-->
+		 	<div class="detailInfo">
+		 		<img src="images/detailModel.png"/>
+		 		<div>
+		 			<label>4人成团</label>
+		 			<span id="viewRules">查看活动规则</span>
+		 		</div>
+		 		<h4>成团时间：3天</h4>
+		 		<h3>原价1580元百草仙头颈拨筋体验卡</h3>
+		 		<p>（包括百草仙头颈拨筋术10次）</p>
+		 		<h2>拼团价：<b>298元</b></h2>
+		 	</div>
+		 	<!-- 参团闺蜜  开始-->
+		 	<div class="joinSister">
+		 		<h2>参团闺蜜</h2>
+		 		<ul>
+		 			<li>
+		 				<div class="sisterImg">
+		 					<img src="images/teamslide1.png" />
+		 				</div>
+		 				<h3>昵称</h3>
+		 			</li>
+		 			<li>
+		 				<div class="sisterImg">
+		 					<img src="images/techslide.png" />
+		 				</div>
+		 				<h3>昵称</h3>
+		 			</li>
+		 			<li>
+		 				<div class="sisterImg waitPayUser">
+		 					<img src="images/teamslide1.png" />
+		 				</div>
+		 				<h3>昵称</h3>
+		 			</li>
+		 			<li>
+		 				<div class="sisterImg">
+		 				</div>
+		 				<h3>昵称</h3>
+		 			</li>
+		 		</ul>
+		 	</div>
+		 	<!-- 拼团流程  开始-->
+		 	<div class="joinStep">
+		 		<h2>拼团流程</h2>
+		 		<ul>
+		 			<li>
+		 				<h3>01</h3>
+		 				<p>支付开团</p>
+		 				<p>或参团</p>
+		 			</li>
+		 			<li>
+		 				<h3>02</h3>
+		 				<p>邀请好友</p>
+		 				<p>参团支付</p>
+		 			</li>
+		 			<li>
+		 				<h3>03</h3>
+		 				<p>达到人数 </p>
+		 				<p>团购成功</p>
+		 			</li>
+		 		</ul>
+		 		<p>注：拼团不成功，全额退款。</p>
+		 	</div>
+		 	
+		 	<!-- 图文详情  开始-->
+		 	<button class="imgdetail">图文详情</button>
+		 	<div id="imgdetailPop">
+		 		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt deserunt officiis voluptas autem quos delectus non labore tempore porro molestias cupiditate commodi corrupti cum ad itaque hic facilis recusandae maxime.
+		 		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit ut delectus vitae doloribus sequi inventore vero consequatur neque veritatis hic placeat recusandae? Quam distinctio debitis laborum nulla autem blanditiis nobis.
+		 		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae odit iusto dolorum quis illo! Sit quas ipsam nobis et velit minima sed reiciendis ab ad molestiae similique quibusdam quisquam distinctio.
+		 	</div>
+		 	
+		 </div>
+		 
+	</div>
+</section>
+<!-- 团购详情主体  结束-->
+
+<!-- 底部按钮  开始-->
+<footer class="startBtnBox displayBox">
+	<button class="startBtn boxflex" id="startTeam">我要开团</button>
+	<button class="joinBtn boxflex" id="joinTeam">我要参团</button>
+</footer>
+<!-- 底部按钮  结束-->
+
+<!-- 顶部    用户入口   开始-->
+<div class="userEnter">
+	<dl class="displayBox">
+		<dt>
+			<img src="images/teamslide1.png" />
+		</dt>
+		<dd class="boxflex">
+			用户姓名
+		</dd>
+	</dl>
+	<div class="minNav"></div>
+</div>
+<!-- 顶部    用户入口   结束-->
+
+<!-- 登录弹层  开始-->
+<div class="loginPopBox">
+	<div class="loginPop" id="loginPop">
+		<span class="closePop">×</span>
+		<h3>登录</h3>
+		<input type="tel" maxlength="11" placeholder="请输入手机号码" id="phone" />
+		<div class="regInfo displayBox">
+			<input class="boxflex" type="tel" maxlength="6" id="code" value="" placeholder="请输入短信验证码">
+	    	<input type="button" id="message" class="send boxflex" value="获取动态验证码">
+		</div>
+		<p>您已在“东涛平民”的微信帐号中登录此手机号，请在该微信帐号中登录此手机号！</p>
+		<button id="login">登录</button>
+	</div>
+</div>
+<div class="loginPopBg"></div>
+<!-- 登录弹层  结束-->
+
+<!-- 登录弹层  开始-->
+<!--<div class="loginPopBox">
+	<div class="loginPop" id="loginPop">
+		<span class="closePop">×</span>
+		<h3>登录</h3>
+		<input type="tel" maxlength="11" placeholder="请输入手机号码" id="userTel" />
+		<button id="loginNext">下一步</button>
+	</div>
+	<div class="loginPop" id="codePop">
+		<label class="backlogin"></label>
+		<span class="closePop">×</span>
+		<h3>请输入验证码</h3>
+		<h4>
+			<i>188 8888 8888</i>
+			<span id="message">30</span>
+		</h4>
+		<ul class="codelist">
+			<li class="focus">
+				<input type="tel" maxlength="1"/>
+			</li>
+			<li>
+				<input type="tel" maxlength="1"/>
+			</li>
+			<li>
+				<input type="tel" maxlength="1"/>
+			</li>
+			<li>
+				<input type="tel" maxlength="1"/>
+			</li>
+			<li>
+				<input type="tel" maxlength="1"/>
+			</li>
+		</ul>
+	</div>
+	
+	
+</div>
+<div class="loginPopBg"></div>-->
+<!-- 登录弹层  结束-->
+<div class="sharePopBg"></div>
+<div class="shareTip">
+	<img src="images/shareTip.png">
+</div>
+
+<!-- 活动规则弹层  开始-->
+<div class="rulePopBox">
+	<span id="closeRule">×</span>
+	<h2>活动规则</h2>
+	<div class="mui-content mui-scroll-wrapper scrollY scrollTp66 scrollBt66">
+		<div class="mui-scroll">
+			<div class="ruleList">
+				<p>
+					1．开团后,您可邀请3位姐妹在您的团购页参团。
+				</p>
+				<p>
+					2．开团与参团都需预支付套餐最低优惠价:***元。
+				</p>
+				<p>
+					3．无论是您还是您的姐妹,开团或参团后,就不能再加入别人的团, 或自己开团。所以请尽量凑在一个团里吧!
+				</p>
+				<p>
+					4．开团后有***小时可邀请您的姐妹参团,过期团人数不满4人,则拼团失败。
+				</p>
+				<p>
+					5．拼团失败后,预支付的全部金额将在7个工作日内退回至您和您姐妹的付款账号里。
+				</p>
+				<p>
+					6．如拼团成功,将收到短信通知，您可联系短信中的技师号码沟通详情
+				</p>
+				<p>
+					7．套餐有效期为60天,本套餐为促销套餐,团购成功则不可退款, 请您理解~
+				</p>
+			</div>
+		</div>
+	</div>	
+	<h3>活动最终解释权归“****美容院”所有，如有疑问请拨打门店电话*******</h3>
+</div>
+<div class="rulePopBg"></div>
+<!-- 活动规则弹层  结束-->
+
+<!-- 提示弹层  开始-->
+<div class="tipPop hide">
+	<h3>提示文字</h3>
+</div>
+<!-- 提示弹层  结束-->
+
+<script type="text/javascript" src="js/public.js" ></script>
+<script type="text/javascript" src="js/details.js" ></script>
+
+</body>
+</html>
+

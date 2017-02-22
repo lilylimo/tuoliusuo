@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<span class="paixu" mode="0" style="display:inline-block;padding:5px 10px;cursor: pointer;background:red;color:#fff;">排序</span>
+	<ul id="list">
+		    <li><span>数值是：</span><span class="orderid">101</span>我是第101个</li>
+		    <li><span>数值是：</span><span class="orderid">17</span>我是第17个</li>
+		    <li><span>数值是：</span><span class="orderid">253</span>我是第253个</li>
+		    <li><span>数值是：</span><span class="orderid">108</span>我是第108个</li>
+		    <li><span>数值是：</span><span class="orderid">5</span>我是第5个</li>
+	</ul>   
+<script type="text/javascript" src="js/jquery-1.11.0.min.js" ></script>
+<script type="text/javascript">
+    $(function() {
+        //1即DESC从大到小，0即ASC从小到大
+        $(".paixu").click(function() {
+            var orderIdArray = [];
+            var idIndex = [];
+            var mode = $(this).attr("mode");
+            var orderid = $(".orderid");
+ 
+            orderid.each(function(i) {
+                var id = parseInt($(this).html()); 
+                idIndex[id] = i;        //orderid的序号
+                orderIdArray.push(id);  //orderid的值
+                console.log(idIndex+"============="+orderIdArray);
+            });
+ 
+            if(mode == 1) 
+            {
+                $(this).attr("mode", 0);
+                $(this).html("从大到小排序");
+                orderIdArray = orderIdArray.sort(function(a, b){return (a < b) ? 1 : -1}); //从大到小排序 
+            } 
+            else if(mode == 0) 
+            {
+                $(this).attr("mode", 1);
+                $(this).html("从小到大排序");
+                orderIdArray = orderIdArray.sort(function(a, b){return (a > b) ? 1 : -1}); //从小到大排序
+            }
+  
+            //alert(orderIdArray+", "+idIndex);
+ 			console.log(orderIdArray);
+            var list = $("#list").find("li");
+            var _length = orderIdArray.length;
+ 
+            for (var i=0; i<_length; i++) 
+            {
+                $("#list").append(list.eq(idIndex[orderIdArray[i]]));
+                console.log(idIndex[orderIdArray[i]]);
+            } 
+        });
+    });
+</script>
+	</body>
+</html>

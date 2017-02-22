@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="format-detection" content="telephone=no" searchtype="map">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="msapplication-tap-highlight" content="no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>技师现场</title>
+<meta name="description" content="">
+<meta name="keyword" content="">
+<link rel="stylesheet" href="css/base.css" />
+<link rel="stylesheet" href="css/store.css" />
+<script type="text/javascript" src="js/jquery-1.11.0.min.js" ></script>
+<script type="text/javascript" src="js/mui.min.js" ></script>
+</head>
+<body>
+<!-- 公共头部  开始-->
+<header class="topHead displayBox">
+	<span class="back mui-action-back" title="返回上一页"></span>
+	<h4 class="boxflex">技师现场</h4>
+</header>
+<!-- 公共头部  结束-->
+<!-- 代付款订单主体  开始-->
+<section class="mui-content mui-scroll-wrapper scrollY whiteScroll scrollTp45">
+	<div class="mui-scroll" id="dataScroll">
+		<dl class="displayBox siteInfo">
+			<dt class="boxflex">距结束：<cite class="settime" data-time="2018-08-30 13:00:00"</cite></dt>
+			<dd><!--<span>已成团</span><span>开团中</span>--><span>团单位：个</span></dd>
+		</dl>
+		<div class="rankingSite">
+		
+			<dl class="displayBox">
+				<dt><span><img src="images/infoImg.png"></span>萌莉莉</dt>
+				<dd class="boxflex">
+					<div class="displayBox">
+						<cite class="boxflex">
+							<b></b>
+							<span data-num="60"><em></em></span>
+							<i>已成团</i>
+						</cite>
+						<cite class="boxflex">
+							<b></b>
+							<span data-num="30"><em></em></span>
+							<i>开团中</i>
+						</cite>
+					</div>
+				</dd>
+			</dl>
+			
+			<dl class="displayBox">
+				<dt><span><img src="images/infoImg.png"></span>萌莉莉</dt>
+				<dd class="boxflex">
+					<div class="displayBox">
+						<cite class="boxflex">
+							<b></b>
+							<span data-num="60"><em></em></span>
+							<i>已成团</i>
+						</cite>
+						<cite class="boxflex">
+							<b></b>
+							<span data-num="30"><em></em></span>
+							<i>开团中</i>
+						</cite>
+					</div>
+				</dd>
+			</dl>
+			<dl class="displayBox">
+				<dt><span><img src="images/infoImg.png"></span>萌莉莉</dt>
+				<dd class="boxflex">
+					<div class="displayBox">
+						<cite class="boxflex">
+							<b></b>
+							<span data-num="380"><em></em></span>
+							<i>已成团</i>
+						</cite>
+						<cite class="boxflex">
+							<b></b>
+							<span data-num="250"><em></em></span>
+							<i>开团中</i>
+						</cite>
+					</div>
+				</dd>
+			</dl>
+			
+			<dl class="displayBox">
+				<dt><span><img src="images/infoImg.png"></span>萌莉莉</dt>
+				<dd class="boxflex">
+					<div class="displayBox">
+						<cite class="boxflex">
+							<b></b>
+							<span data-num="60"><em></em></span>
+							<i>已成团</i>
+						</cite>
+						<cite class="boxflex">
+							<b></b>
+							<span data-num="30"><em></em></span>
+							<i>开团中</i>
+						</cite>
+					</div>
+				</dd>
+			</dl>
+			
+			<dl class="displayBox">
+				<dt><span><img src="images/infoImg.png"></span>萌莉莉</dt>
+				<dd class="boxflex">
+					<div class="displayBox">
+						<cite class="boxflex">
+							<b></b>
+							<span data-num="60"><em></em></span>
+							<i>已成团</i>
+						</cite>
+						<cite class="boxflex">
+							<b></b>
+							<span data-num="30"><em></em></span>
+							<i>开团中</i>
+						</cite>
+					</div>
+				</dd>
+			</dl>
+				
+			<dl class="displayBox">
+				<dt><span><img src="images/infoImg.png"></span>萌莉莉</dt>
+				<dd class="boxflex">
+					<div class="displayBox">
+						<cite class="boxflex">
+							<b></b>
+							<span data-num="270"><em></em></span>
+							<i>已成团</i>
+						</cite>
+						<cite class="boxflex">
+							<b></b>
+							<span data-num="140"><em></em></span>
+							<i>开团中</i>
+						</cite>
+					</div>
+				</dd>
+			</dl>
+			
+		</div>
+		
+		
+		
+	</div>
+</section>
+<!-- 代付款订单主体  结束-->
+
+<script type="text/javascript" src="js/public.js" ></script>
+<script type="text/javascript" src="js/waitPayList.js" ></script>
+<script>
+	rankingSite();
+	updateEndTime();
+	paixu();
+	//倒计时函数
+function updateEndTime(){
+	 var date = new Date();
+	 var time = date.getTime();  //当前时间距1970年1月1日之间的毫秒数
+	 $(".settime").each(function(){
+		 var endDate =this.getAttribute("data-time"); //结束时间字符串
+		 //转换为时间日期类型
+		 var endDate1 = eval('new Date(' + endDate.replace(/\d+(?=-[^-]+$)/, 
+		 function (a) { 
+		 	return parseInt(a, 10) - 1; 
+		 	}).match(/\d+/g) + ')'
+		 );
+		 var endTime = endDate1.getTime(); //结束时间毫秒数
+		 var lag = (endTime - time) / 1000; //当前时间和结束时间之间的秒数
+		  if(lag > 0){
+			   var second = Math.floor(lag % 60);   
+			   var minite = Math.floor((lag / 60) % 60);
+			   var hour = Math.floor((lag / 3600) % 24);
+			   var day = Math.floor((lag / 3600) / 24);
+			   
+			   if(second<10){second = "0" + second;}
+			   if(minite<10){minite ="0" + minite;}
+			   if(hour<10){hour ="0" + hour; }
+			   if(day<10){day ="0" + day;}
+			   $(this).html(day+"天"+hour+"时"+minite+"分"+second+"秒");// 
+			  // $(this).html('<span class="day">'+day+'</span><span>'+hour+'</span><span>'+minite+'</span><span>'+second+'</span>');
+		  }else{
+		  	// $(this).html("<em>团购已经结束啦！</em>");
+		  }
+	 });
+	 setTimeout("updateEndTime()",1000);
+}
+
+	
+	//进度条
+	function rankingSite(){
+		$(".rankingSite cite span").each(function(i,item){
+			var index = $(this).closest("dl").index();
+			var maxHeight = 90;
+			var thisNum=parseInt($(item).attr("data-num"));
+			if(index == 0){
+				var maxWidth = $(item).closest("cite").width();
+				$(item).closest("span").css("max-width",maxWidth+"px");
+				$(item).find("em").animate({
+					"width": thisNum+"px"
+				},3000);
+			}else{
+				$(item).find("em").animate({
+					"height": thisNum+"px"
+				},3000);
+			}
+		   var clearTime = window.setInterval(function(){
+		   		if(index == 0){
+		   			var a = $(item).find("em").width().toFixed(0);
+		   			var newWidth = maxWidth-40;
+		   			if(a > 40){
+		   				if(a > newWidth){
+		   					$(item).prev('b').css("left",newWidth+"px");
+		   				}else{
+		   					$(item).prev('b').css("left",a+"px");
+		   				}
+		   			}
+					$(item).prev('b').html(a);
+		   			
+		   		}else{
+					var a = $(item).find("em").height().toFixed(0);
+					$(item).prev('b').html(a);
+				}
+		   		if($(item).prev('b').text() == thisNum) {
+					clearInterval(clearTime);
+					//console.log("结束"+i);
+					
+				}
+			},70);
+			
+			
+		})
+	}
+	
+	
+	// 从大到小排序
+	function paixu(){
+		var orderIdArray = [];
+        var idIndex = [];
+        //var mode = $(this).attr("mode");
+        var listdl = $(".rankingSite dl");
+        listdl.each(function(i) {
+        	var firstSpan = $(this).find("cite:eq(0) span").attr("data-num");
+        	var secondSpan = $(this).find("cite:eq(1) span").attr("data-num");
+            var id = parseInt(firstSpan)+parseInt(secondSpan); 
+            
+            idIndex[id] = i;        //orderid的序号
+        	orderIdArray.push(id);  //orderid的值
+        	//console.log(idIndex+"============="+orderIdArray);
+        });
+ 
+        /*if(mode == 1) 
+        {
+            $(this).attr("mode", 0);
+	        $(this).html("从大到小排序");
+	        orderIdArray = orderIdArray.sort(function(a, b){return (a < b) ? 1 : -1}); //从大到小排序 
+        } 
+        else if(mode == 0) 
+        {
+	        $(this).attr("mode", 1);
+	        $(this).html("从小到大排序");
+	        orderIdArray = orderIdArray.sort(function(a, b){return (a > b) ? 1 : -1}); //从小到大排序
+        }*/
+  
+     
+		orderIdArray = orderIdArray.sort(function(a, b){return (a < b) ? 1 : -1}); //从大到小排序 
+	    console.log(orderIdArray);
+		
+        var list = $(".rankingSite").find("dl");
+        var _length = orderIdArray.length;
+ 		//console.log(orderIdArray);
+        for (var i=0; i<_length; i++){
+      	  $(".rankingSite").append(list.eq(idIndex[orderIdArray[i]]));
+      	  console.log(idIndex[orderIdArray[i]]);
+        } 
+	
+	}
+</script>
+</body>
+</html>

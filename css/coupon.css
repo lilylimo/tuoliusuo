@@ -1,0 +1,134 @@
+/*******  我的红包    ********/
+
+/*  红包列表    */
+.couponBox{padding: 6% 5%;}
+
+.openExplanation{ line-height: 20px; text-align: right; padding-bottom: 10px; color: #797979;}
+.openExplanation span:before{content: "?";font-size: 14px;margin-right: 3px;background: #ddd;width: 20px;height: 20px;display: inline-block;text-align: center;border-radius: 50%;}
+
+.explainBg{width: 100%;height: 100%;background: rgba(0,0,0,.3);position: fixed;left: 0;top: 0;display: none;z-index: 9;}
+.explainBox{width: 100%;min-height: 330px;position: fixed;bottom:-999px;left: 0;z-index: 10;padding-bottom: 15px;background: #fff;}
+.explainBox .closeBox{width: 30px;height: 30px;line-height:30px;background: #f3f3f3;text-align: center;border-radius: 50%;border: 1px solid #eaeaea;font-size: 14px;position: absolute;top: -15px;right: 10px;z-index: 12;}
+.explainBox .closeBox:before{content: "×";color: #b59b9b;font-size: 22px;font-weight: bold;line-height: 26px;}
+.explainMain{margin:10px 15px 30px 15px;}
+.explainMain h3{margin: 10px 0;font-weight: bold;}
+.explainMain p{font-size: 12px;line-height: 20px;margin-bottom: 5px;color: #666;}
+.explainMain p span{color: #333;font-weight: bold;}
+.explainMain h4{font-size: 12px;line-height: 20px;margin-bottom: 5px;color: #666;padding-left: 24px;padding-right: 10px;}
+.explainClose{width: 70%;height: 40px;line-height: 40px;border: 1px solid #eaeaea;border-radius: 3px;margin: 0 auto;}
+
+.couponList{background: #fff;border-radius: 10px;overflow: hidden;margin-bottom: 6%;}
+.couponList dt{width: 30%;color: #fff;text-align: center;position: relative;}
+.couponList dt.red{background: #ff6f60;}
+.couponList dt.green{background: #4ab752;}
+.couponList dt:before{content: "";width: 10px;height: 10px;background: #f3f3f3;border-radius: 50%;position: absolute;top: -5px;right: -5px;}
+.couponList dt:after{content: "";width: 10px;height: 10px;background: #f3f3f3;border-radius: 50%;position: absolute;bottom: -6px;right: -5px;}
+.couponList dt h3{font-weight: bold;height: 46px;line-height: 60px;font-size: 16px;}
+.couponList dt h3 b{font-size: 24px;font-weight: bold;margin-left:2px;}
+.couponList dt h4{height: 34px;font-size: 13px;}
+.couponList dt span.lineBar{width: 5px;height: 60px;background:url(../images/line.png);position: absolute;top: 10px;right: 0px;}
+.couponList dt.green span{background: url(../images/greenline.png);}
+
+.couponList dd{padding: 3% 0% 3% 2%;}
+.couponList dd ul{font-size: 12px;color: #979797;}
+.couponList dd ul li{line-height: 20px;}
+.couponList dd ul li:before{content: "•";float: left;margin-right: 3px;color: #c5c5c5;}
+
+/*******  抢红包    ********/
+.grabBox{width: 100%;background: url(../images/grabcouponBg.png);padding-bottom: 50px;}
+
+/*  抢红包     头部     */
+.grabTop{position: relative;}
+.grabTop img{width: 100%;}
+.grabTop h3{width: 40%;background: url(../images/leftcoupon.png) no-repeat;background-size: 100%;height: 26px;line-height: 26px;text-align: center;color: #b50000;position: absolute;top: 73%;left: 30%;}
+.grabTop h3 i{margin: 0 2px;}
+
+/*  抢红包     主体     */
+.grabMain{padding: 6% 10%;}
+.grabMain .grabTimeBox{color: #fae717;text-align: center;}
+.grabMain .grabTimeBox span{margin-bottom: 10px;}
+.grabMain .grabTimeBox cite i{background: #d43220;margin: 0 2px;color: #fff;font-weight: bold;padding:0 5px;}
+
+.grabMain .grabBtn{width: 125px;height: 50px; margin: 5px auto;background:url(../images/grabBtn.png) no-repeat;background-size: cover;}
+
+.grabListBox{border: 2px dashed #d43220;background: #eb6455;border-radius: 20px;overflow: hidden;margin: 15px 0;text-align: center;position: relative;}
+.grabListBox img{width: 55%;margin: 5px 0;}
+.grabListBox .rankingInfo{ height:110px; overflow:hidden; position:relative;margin-bottom: 20px;}
+.grabListBox ul{border-top: 2px dashed #d43220;margin: 0 4%;padding: 10px 0;}
+.grabListBox ul li{color: #fff;overflow: hidden;height: 30px;line-height: 30px;font-size: 13px;}
+.grabListBox ul li:not(:last-of-type){border-bottom: 1px dashed #d43220;}
+.grabListBox ul li span{width: 50%;float: left;}
+
+/*   活动规则      */
+.ruleBox{width: 100%;background: #eb6455;border-radius: 20px;position: relative;margin-top: 40px;}
+.ruleBox>img{width: 100%;position: absolute;top: -16px;left: 0;z-index: 2;}
+.ruleBox .ruleList{padding: 30px 20px;font-size: 12px;}
+.ruleBox .ruleList p{color: #fee8e6;margin-bottom: 10px;}
+.ruleBox .ruleList h4{color: #fcff9c;padding:10px 10px 0 10px;}
+.ruleBox .ruleList h4 label{margin-right: 5px;}
+
+
+/*  抢到了   弹层       */
+/*.grabYes{width: 240px;height: 300px;position: fixed;top: 50%;left: 50%;z-index: 8;margin-top: -150px;margin-left: -120px;background: url(../images/grabYesBg.png) no-repeat top;background-size: 100%;}*/
+
+.grabPopBg{width: 100%;height: 100%;position: fixed;top:0;left: 0;background: rgba(0,0,0,.6);z-index: 3;display: none;}
+
+.grabPopBox{width: 200px;height: 280px;position: fixed;top: 50%;left: 50%;z-index: 6;margin-top: -140px;margin-left: -100px;background: #f66152;border-radius: 10px;text-align: center;padding:5% 10%;}
+.grabPopBox h4{color: #fefb00;margin-top: 5px;}
+.grabPopBox h3{color: #fefb00;font-size: 18px;font-weight: bold;line-height: 30px;margin-bottom: 10px;}
+.grabPopBox img{width: 100%;}
+.grabPopBox p{color: #fff;font-size: 12px;line-height: 28px;}
+.grabPopBox .grabYesImg{width: 120%;position: absolute;top: -10%;left: -10%;z-index: 8;}
+
+.grabPopBox .ngImg{width: 60%;}
+.grabPopBox .ngTip{font-size: 12px;margin-bottom: 8px;}
+
+
+/*三星galaxy*/
+@media screen and (min-width:360px){
+	.couponList dt h3 b {font-size: 26px;}
+	.couponList dd {padding: 3% 0% 3% 5%;}
+	.couponList dd ul li:before {margin-right: 5px;}
+	.grabTop h3{height:30px;line-height: 28px;}
+	.grabMain .grabBtn{height: 73px;width: 180px;}
+	.grabPopBox{width: 300px;height: 400px;margin-top: -200px;margin-left: -150px;}
+	.grabPopBox h4{margin-top:12px;}
+	.grabPopBox .ngTip{margin-top:0;}
+	.grabListBox .rankingInfo{ height:130px;}
+	.explainBox{min-height:440px;}
+	.explainMain {margin: 10px 20px 30px 20px;}
+}
+/*iPhone 6*/
+@media screen and (min-width:375px){
+}
+/*iPhone 6 Plus*/
+@media screen and (min-width:414px){
+	.couponList dd {padding: 3% 0% 3% 6%;}
+	.couponList dd ul li:before {margin-right: 10px;}
+	.grabTop h3{height:36px;line-height: 30px;font-size: 16px;}
+	.grabMain .grabTimeBox cite i{margin: 0 3px;font-size: 16px;}
+	.grabPopBox .ngTip{margin-top:12px;}
+	.explainBox{min-height: 455px;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
